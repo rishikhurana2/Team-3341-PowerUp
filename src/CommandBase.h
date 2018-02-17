@@ -8,7 +8,7 @@
 
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
-
+#include "Subsystems/Camera.h"
 #include "Subsystems/Lift.h"
 
 
@@ -25,10 +25,11 @@ public:
 	static void initialize();
 
 	// Create a single static instance of all of your subsystems
-	static std::unique_ptr<OI> oi;\
+	static std::unique_ptr<OI> oi;
 	static DriveTrain* drive;
 
 	static Lift* lift;
+	static Camera * camera;
 
 };
 

@@ -11,6 +11,7 @@
 
 DriveTrain* CommandBase::drive = nullptr;
 Lift* CommandBase::lift = nullptr;
+Camera* CommandBase::camera = nullptr;
 std::unique_ptr<OI> CommandBase::oi;
 
 
@@ -21,7 +22,7 @@ CommandBase::CommandBase(const std::string &name) :
 
 void CommandBase::initialize()
 {
-
+	camera = new Camera();
 	drive = new DriveTrain();
 	lift = new Lift();
 	oi = std::make_unique<OI>();

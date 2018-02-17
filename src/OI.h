@@ -3,23 +3,27 @@
 #include "WPILib.h"
 #include "RobotMap.h"
 
-class OI {
+class OI{
 private:
 	Joystick* leftStick;
 	Joystick* rightStick;
 
 	Joystick* liftStick;
-	Button* testButton;
-	Button* calibrateLift;
+	JoystickButton* testButton;
+	JoystickButton* calibrateLift;
+	JoystickButton* getCrate;
 
-
+	JoystickButton* cameraLeft;
+	JoystickButton* cameraRight;
+	JoystickButton* shootCrate;
 public:
 	OI();
+	void catcherButtons();
 	Joystick* getLeftStick();
 	Joystick* getRightStick();
-
 	Joystick* getLiftStick();
-
+	JoystickButton* getCameraLeft();
+	JoystickButton* getCameraRight();
 };
 
 #endif  // OI_H
